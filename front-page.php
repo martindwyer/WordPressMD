@@ -1,69 +1,146 @@
 <?php get_header() ?>
 
-<div class="page-banner">
-  <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/hero.jpg') ?>);"></div>
-  <div class="page-banner__content container t-center c-white">
-    <h1 class="headline headline--large">Welcome!</h1>
-    <h2 class="headline headline--small">We think you&rsquo;ll like it here!</h2>
-    <h3>Find a major for you <i class="fa fa-level-down" aria-hidden="true"></i> </h3>
-    <a href="<?php echo get_post_type_archive_link('program'); ?>" class="btn btn--large btn--blue">Find Your Major</a>
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="header center teal-text">Website Template</h1>
+    <div class="row center">
+      <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+    </div>
+    <div class="row center">
+      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange darken-4">Get Started</a>
+    </div>
+    <br><br>
+
   </div>
 </div>
 
-<div class="full-width-split group">
-  <div class="full-width-split__one">
-    <div class="full-width-split__inner">
-      <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
-      <?php
-      home_events();
-      ?>
-      <p class="t-center no-margin"><a href="<?php echo get_post_type_archive_link('event'); ?>" class="btn btn--blue">View All Events</a></p>
+
+<!--   Icon Section   -->
+<div class="row">
+  <div class="col s12 m4">
+    <div class="icon-block">
+      <h2 class="center teal-text"><i class="material-icons">flash_on</i></h2>
+      <h5 class="center">Speeds up development</h5>
+
+      <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
     </div>
   </div>
-  <div class="full-width-split__two">
-    <div class="full-width-split__inner">
-      <h2 class="headline headline--small-plus t-center">From Our Blogs</h2>
-      <?php
-      home_posts();
-      ?>
-      <p class="t-center no-margin"><a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
+
+  <div class="col s12 m4">
+    <div class="icon-block">
+      <h2 class="center teal-text"><i class="material-icons">group</i></h2>
+      <h5 class="center">User Experience Focused</h5>
+
+      <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+    </div>
+  </div>
+
+  <div class="col s12 m4">
+    <div class="icon-block">
+      <h2 class="center teal-text"><i class="material-icons">settings</i></h2>
+      <h5 class="center">Easy to work with</h5>
+
+      <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
     </div>
   </div>
 </div>
 
-<div class="hero-slider">
-  <div data-glide-el="track" class="glide__track">
-    <div class="glide__slides">
-      <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/software-slider.jpg') ?>);">
-        <div class="hero-slider__interior container">
-          <div class="hero-slider__overlay">
-            <h2 class="headline headline--medium t-center">Software Development</h2>
-            <p class="t-center">Focusing on computer science and software development.</p>
-            <p class="t-center no-margin"><a href="<?php echo site_url('/software-development'); ?>" class="btn btn--blue">Learn more</a></p>
-          </div>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h2 class="header center white-text">Delivering on time</h2>
+      <div class="row center">
+        <h5 class="header col s12">Using the best designs to produce quality products</h5>
+      </div>
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange darken-4">Get Started</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+  <div class="parallax"><img src="<?php echo THEME_URI . '/images/background1.jpg' ?>" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+          <h5 class="center">Speeds up development</h5>
+
+          <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
         </div>
       </div>
-      <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/technician-slider.jpg') ?>);">
-        <div class="hero-slider__interior container">
-          <div class="hero-slider__overlay">
-            <h2 class="headline headline--medium t-center">Computer Technician</h2>
-            <p class="t-center">Focus on building and maintaining computer equipment.</p>
-            <p class="t-center no-margin"><a href="<?php echo site_url('/computer-technician'); ?>" class="btn btn--blue">Learn more</a></p>
-          </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+          <h5 class="center">User Experience Focused</h5>
+
+          <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
         </div>
       </div>
-      <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/network-slider.jpg') ?>);">
-        <div class="hero-slider__interior container">
-          <div class="hero-slider__overlay">
-            <h2 class="headline headline--medium t-center">Network Management</h2>
-            <p class="t-center">Focus on building and maintaining computer networks.</p>
-            <p class="t-center no-margin"><a href="<?php echo site_url('/network-management'); ?>" class="btn btn--blue">Learn more</a></p>
-          </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+          <h5 class="center">Easy to work with</h5>
+
+          <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
         </div>
       </div>
     </div>
-    <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
+
   </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="<?php echo THEME_URI . '/images/background2.jpg' ?>" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+  <div class="section">
+
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <h4>Contact Us</h4>
+        <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="<?php echo THEME_URI . '/images/background3.jpg' ?>" alt="Unsplashed background img 3"></div>
+</div>
+
+
+</div>
 </div>
 
 <?php get_footer() ?>
