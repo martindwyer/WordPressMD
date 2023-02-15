@@ -4,28 +4,14 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo get_the_title() ?> | North Park Colorado | American Wilderness</title>
+    <link rel="icon" type="image/x-icon" href="<?php echo THEME_URI . "/assets/images/favicon_io/favicon.ico" ?>">
     <?php wp_head() ?>
 </head>
 
 <body <?php body_class() ?>>
-    <header class="header">
-        <nav class="teal white-text lighten-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo white-text">Logo</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="white-text" href="#">Navbar Link</a></li>
-                    <li><a class="white-text" href="#">Navbar Link</a></li>
-                    <li><a class="white-text" href="#">Navbar Link</a></li>
-                    <li><a class="white-text" href="#">Navbar Link</a></li>
-                    <li><a class="white-text" href="#">Navbar Link</a></li>
-                </ul>
+    <?php get_template_part("template-parts/core/search-display"); ?>
+    <?php get_template_part("template-parts/core/navbar"); ?>
 
-                <ul id="nav-mobile" class="sidenav">
-                    <li><a href="#">Navbar Link</a></li>
-                    <li><a href="#">Navbar Link</a></li>
-                    <li><a href="#">Navbar Link</a></li>
-                    <li><a href="#">Navbar Link</a></li>
-                </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-    </header>
+    <?php get_template_part("template-parts/terms/notification"); ?>
+    <?php get_template_part("template-parts/core/back-to-top"); ?>

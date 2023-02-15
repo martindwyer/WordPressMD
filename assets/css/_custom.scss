@@ -1,0 +1,86 @@
+// scss-docs-start theme-color-variables
+$primary: #ab7a26;
+$secondary: gray;
+$success: pink;
+$info: cyan;
+$warning: #009900;
+$danger: red;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+$logo-font: 'Cinzel Decorative',
+cursive;
+
+$bytes-font: 'MuseoModerno',
+cursive;
+
+
+
+.bytes-font {
+    font-family: $bytes-font;
+    font-weight: 700;
+    letter-spacing: -.25rem;
+    font-size: 125%;
+    color: #009900;
+}
+
+body {
+
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-underline-offset: .2rem;
+    color: blue;
+
+}
+
+.btn {
+    background-color: $warning;
+    border-color: $warning;
+    color: $white;
+    transition: 1s;
+}
+
+.btn:hover {
+    color: $white;
+    box-shadow: 0 0 2rem $white;
+    transform: scale(1.1);
+}
+
+$border-radius: .5rem;
+
+.no-decoration {
+    text-decoration: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh;
+    /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* needed to keep in the background */
+    background: url('images/site-background-1.webp') top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

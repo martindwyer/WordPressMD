@@ -1,0 +1,42 @@
+footer {
+
+    a {
+        text-decoration: none;
+        color: $light;
+    }
+
+    .footer-description {
+
+        hr {
+            width: 20%;
+        }
+
+        .site-description {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $light;
+        }
+    }
+
+    .menu {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .social-media {
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+                color: $light;
+                font-size: 2rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+}

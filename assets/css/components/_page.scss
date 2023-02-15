@@ -1,0 +1,63 @@
+.page {
+    &.container-fluid {
+        padding: 0;
+    }
+
+    .entry-header {
+        display: none;
+    }
+
+    .content {
+        padding: 3rem 0;
+        background-color: $white;
+    }
+
+    .post-item {
+
+        .feature-image {
+            width: 100%;
+            height: auto;
+            border-radius: $border-radius;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .6);
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.5);
+                box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, .9);
+            }
+        }
+
+        h2 {
+            a {
+                text-decoration: none;
+                color: $dark;
+            }
+        }
+
+        .metabox {
+
+            a {
+                text-decoration: none;
+                color: $black;
+                font-weight: 500;
+            }
+
+        }
+    }
+
+    .post-break {
+        width: 50%;
+        margin: 3rem auto;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .page-numbers {
+        margin-right: 1.5rem;
+    }
+}

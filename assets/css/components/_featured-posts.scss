@@ -1,0 +1,69 @@
+div.featured-posts {
+
+    padding: 6rem 3rem 6rem 3rem;
+    background-color: #fff;
+
+    h2 {
+        margin-bottom: 3rem;
+        color: $primary;
+        text-shadow: .1rem .1rem .1rem rgba($black, .7);
+        font-size: 4rem;
+    }
+
+    div.card {
+
+        border-color: transparent;
+        border-right: 1px solid rgba($black, .1);
+
+        .card-title {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+
+            a {
+                color: $dark;
+
+
+            }
+
+        }
+
+        .card-img-holder {
+            height: 25rem;
+            overflow: hidden;
+            box-shadow: 0 0 1rem rgba($dark, .80);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 1rem;
+
+            img {
+                height: 35rem;
+                width: auto;
+                position: absolute;
+                top: 0;
+                transition: 1s;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .card-body {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+        }
+
+    }
+
+}
+
+#featured-posts div:nth-child(3) {
+    border-right: none;
+}

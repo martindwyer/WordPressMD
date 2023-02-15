@@ -1,0 +1,78 @@
+// Under 1400px
+@include media-breakpoint-down(xxl) {
+    .jumbotron .site-title .headline {
+        font-size: 3.5rem;
+    }
+}
+
+// Under 1200px
+@include media-breakpoint-down(xl) {
+    .jumbotron .site-title .headline {
+        font-size: 3.5rem;
+    }
+}
+
+// Under 992px
+@include media-breakpoint-down(lg) {
+    .jumbotron .site-title .headline {
+        font-size: 3rem;
+    }
+
+    .jumbotron .left .tagline {
+        font-size: 2rem;
+    }
+
+    .carousel.slide {
+        h3 {
+            font-size: 2rem;
+        }
+
+        .btn {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Under 768px
+@include media-breakpoint-down(md) {
+    .jumbotron .site-title .headline {
+        font-size: 3rem;
+    }
+
+    .jumbotron .left .tagline {
+        font-size: 1.75rem;
+    }
+
+    .jumbotron .right .site-description p {
+        font-size: .9rem;
+    }
+
+    .about-images {
+        display: none;
+    }
+}
+
+// Under 576px
+@include media-breakpoint-down(sm) {
+    .jumbotron .site-title .headline {
+        font-size: 2rem;
+    }
+
+    .jumbotron .left .tagline {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron .right .site-description p {
+        font-size: .7rem;
+    }
+
+    .carousel.slide {
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .btn {
+            font-size: .8rem;
+        }
+    }
+}

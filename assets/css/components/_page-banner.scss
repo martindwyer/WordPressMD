@@ -1,0 +1,24 @@
+.page-banner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 35vh;
+
+    color: $primary;
+
+    h1 {
+        font-size: 4rem;
+        text-shadow: 0.2rem 0.2rem 0rem $black;
+    }
+
+    h3 {
+        text-shadow: 0.2rem 0.2rem 0rem $black;
+
+    }
+
+
+    background-image: url("images/page-banner-background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

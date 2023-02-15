@@ -1,0 +1,104 @@
+.jumbotron {
+    padding-top: 5rem;
+    min-height: 100vh;
+    background-color: rgba(black, .3);
+
+    .right,
+    .left {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
+    }
+
+    .left {
+        justify-content: center;
+
+        h1 {
+            color: $light;
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: .2rem .2rem 1rem $black;
+            animation-name: zoomInDown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+
+        }
+
+
+
+        p {
+
+            color: $light;
+            text-shadow: 0rem 0rem 1rem $black;
+        }
+
+        .tagline {
+            color: #fff;
+            font-size: 2.5rem;
+            text-shadow: 0rem 0rem 1rem $black;
+            animation-name: zoomInDown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+
+        .btn {
+            margin-top: 20vh;
+            margin-bottom: 5vh;
+            background-color: $primary;
+            border-color: $primary;
+            color: $light;
+            animation-name: zoomInDown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+
+    }
+
+    .right {
+        .featured-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 40%;
+                max-width: 250px;
+                height: auto;
+                border-radius: $border-radius;
+                margin-bottom: 1rem;
+                animation-name: zoomInDown;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+            }
+
+        }
+
+
+        .site-description {
+            animation-name: zoomInDown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            color: $light;
+
+            h3,
+            h6 {
+                text-shadow: 0rem 0rem 1rem $black;
+            }
+
+            p {
+                text-align: center;
+                margin: 0 auto;
+                font-weight: 700;
+                text-shadow: 0rem 0rem 1rem $black;
+            }
+        }
+    }
+
+
+}

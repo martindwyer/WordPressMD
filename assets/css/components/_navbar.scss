@@ -1,0 +1,53 @@
+.navbar {
+
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .navbar-brand {
+        img {
+            height: 35px;
+            width: auto;
+        }
+    }
+
+    .navbar-right {
+
+        .btn {
+            color: $white;
+            margin-right: 1rem;
+        }
+
+        .admin,
+        .logout,
+        .register,
+        .login {
+            background: transparent;
+            border: none;
+            transition: none;
+
+            &:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+
+        .btn-search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-right: 2rem;
+            transition: none;
+
+            i {
+                color: $white;
+            }
+        }
+
+    }
+
+    form {
+        display: none !important;
+    }
+}

@@ -18,7 +18,7 @@ define('THEME_URI', esc_url(get_template_directory_uri()));
 /**
  * Theme features
  */
-require_once THEME_DIR . '/inc/core/theme-features.php';
+require THEME_DIR . '/inc/core/theme-features.php';
 
 /**
  * Theme scripts
@@ -31,72 +31,121 @@ require_once THEME_DIR . '/inc/core/theme-scripts.php';
 require_once THEME_DIR . '/inc/core/nav-menu.php';
 
 /**
- * Theme functionality: Image support
+ * Home page featured posts
  */
-require_once THEME_DIR . '/inc/core/image-support.php';
+require_once "inc/home/home-posts.php";
 
 /**
- * Theme functionality: Post types
+ * Page banner functionality
  */
-require_once THEME_DIR . '/inc/types/post-types.php';
+require_once "inc/page/page_banner.php";
+
+add_filter('show_admin_bar', '__return_false');
+
+function is_admin_user()
+{
+    return current_user_can('manage_options');
+}
 
 /**
- * Theme functionality: REST API
+ * Change posts per page by post type
  */
-require_once THEME_DIR . '/inc/rest/rest-api.php';
-require_once THEME_DIR . '/inc/rest/like-route.php';
+function bb_change_posts_per_page($query)
+{
 
-/**
- * Theme functionality: Adjust queries as needed
- */
-require_once THEME_DIR . '/inc/campus/queries.php';
-require_once THEME_DIR . '/inc/event/queries.php';
-require_once THEME_DIR . '/inc/program/queries.php';
-
-/**
- * Theme functionality: Set up Google map key
- */
-require_once THEME_DIR . '/inc/campus/map-key.php';
-
-/**
- * Theme utilities
- */
-
-/**
- * Page banner utility
- */
-require_once THEME_DIR . '/inc/core/page-banner.php';
-
-/**
- * Home page functionality
- */
-require_once THEME_DIR . '/inc/home/home-posts.php';
-require_once THEME_DIR . '/inc/home/home-events.php';
+    if (is_search()) {
+        $query->set('posts_per_page', -1);
+    }
+}
+add_filter('pre_get_posts', 'bb_change_posts_per_page');
 
 
-/**
- * Redirect subscribers on login
- */
-require_once THEME_DIR . '/inc/core/redirect-login.php';
+function wpb_login_logo()
+{
+    wp_enqueue_script('main-theme-js', THEME_URI . '/assets/build/index.js', NULL, '1.0', true);
 
-/**
- * Remove admin bar for subscriber login
- */
-require_once THEME_DIR . '/inc/core/remove-admin.php';
+?>
+    <style type="text/css">
+        body.login {
+            background: url(<?php echo THEME_URI . '/assets/images/site-background.jpeg' ?>) top center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #login h1 a,
+        .login h1 a {
+            display: none;
+        }
+
+        .login #backtoblog a,
+        .login #nav a {
+            color: #fff !important;
+        }
+    </style>
+<?php }
+add_action('login_enqueue_scripts', 'wpb_login_logo');
 
 
-/**
- * Customize login screen
- */
-require_once THEME_DIR . '/inc/core/login-custom.php';
 
-/**
- * Make notes private
- */
-require_once THEME_DIR . '/inc/core/notes-private.php';
+function auto_redirect_after_logout()
+{
+    wp_safe_redirect(home_url());
+    exit;
+}
+
+add_action('wp_logout', 'auto_redirect_after_logout');
 
 
-/**
- * Exclude node_modules on export
- */
-require_once THEME_DIR . '/inc/core/exclude-filters.php';
+function auto_redirect_after_login()
+{
+    wp_safe_redirect(home_url());
+    exit;
+}
+
+add_action('wp_login', 'auto_redirect_after_login');
+
+
+function setup_head_section()
+{
+?>
+    <meta property="og:title" content=<?php echo get_the_title(); ?> | Primal Strength and Conditioning - Living Strong and Staying Positive key="title" />
+    <meta name="description" content="Primal Strength Training and Conditioning, a website dedicated to strength, conditioning and longevity." />
+    <meta name="keywords" content="power lifting conditioning weight lifting fitness longevity" />
+    <meta property="og:title" content="<?php echo get_the_title(); ?> | Primal Strength and Conditioning - Living Strong and Staying Positive" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://goprimalstrength.com/" />
+    <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
+
+    <meta name="twitter:title" content="<?php echo get_the_title(); ?> | Primal Strength and Conditioning - Living Strong and Staying Positive" />
+    <meta name="twitter:description" content="Primal Strength Training and Conditioning, a website dedicated to strength, conditioning and longevity." />
+    <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
+    <meta name="twitter:card" content="summary_large_image" />
+<?php
+}
+
+add_action('wp_head', 'setup_head_section');
+
+function custom_title($title_parts)
+{
+    if (!is_front_page() && is_home()) {
+        $title_parts['title'] = 'Posts | Primal Strength and Conditioning - Living Strong and Staying Positive';
+    } else if (is_category()) {
+        $title_parts['title'] = get_the_category()[0]->name . ' | Primal Strength and Conditioning - Living Strong and Staying Positive';
+    } else {
+        $title_parts['title'] = get_the_title() . ' | Primal Strength and Conditioning - Living Strong and Staying Positive';
+    }
+
+
+    return $title_parts;
+}
+add_filter('document_title_parts', 'custom_title');
+
+function ai1wm_exclude_filters($exclude_filters)
+{
+    $exclude_filters[] = 'themes/PrimalPressMD/assets/node_modules';
+    return $exclude_filters;
+}
+
+add_filter('ai1wm_exclude_content_from_export', 'ai1wm_exclude_filters');

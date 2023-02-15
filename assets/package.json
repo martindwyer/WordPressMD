@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch ./css:dist",
+    "minify:css": "css-minify -d /build -o /build",
     "build": "wp-scripts build",
     "start": "wp-scripts start",
     "dev": "wp-scripts start",
@@ -14,14 +15,16 @@
   "author": "Martin Dwyer",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@glidejs/glide": "^3.4.1",
     "@wordpress/scripts": "*",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.0",
-    "axios": "^0.21.4",
+    "axios": "^0.21.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.9.1",
+    "emailjs-com": "^3.2.0",
     "glightbox": "^3.1.0",
     "normalize.css": "^8.0.1",
     "postcss-cli": "^9.0.2"
