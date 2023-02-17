@@ -19,6 +19,7 @@ class Navbar {
   setActiveLink = () => {
     let activeSet = false;
     let homeLink;
+    let galleriesLink;
     for (let link of this.navLinks) {
       if (window.location.href.includes(link.outerText.toLowerCase())) {
         link.classList.add("active");
@@ -27,9 +28,14 @@ class Navbar {
       if (link.outerText.toLowerCase() === "home") {
         homeLink = link;
       }
+      if (link.outerText.toLowerCase() === "galleries") {
+        galleriesLink = link;
+      }
     }
-    if (!activeSet) {
+    if (!activeSet && document.querySelector(".jumbotron")) {
       homeLink.classList.add("active");
+    } else if (!activeSet) {
+      galleriesLink.classList.add("active");
     }
   };
 }

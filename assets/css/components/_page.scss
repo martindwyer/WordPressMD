@@ -3,8 +3,24 @@
         padding: 0;
     }
 
+    .container {
+        padding-top: 2rem;
+    }
+
     .entry-header {
         display: none;
+    }
+
+    .featured-image {
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: $border-radius;
+            width: 70%;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 1rem rgba(black, .8);
+        }
     }
 
     .content {
@@ -20,6 +36,7 @@
             border-radius: $border-radius;
             box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .6);
             transition: 1s;
+            margin-bottom: 2rem;
 
             &:hover {
                 transform: scale(1.5);

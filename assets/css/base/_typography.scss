@@ -1,0 +1,27 @@
+.site-main {
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+}
+
+.post.container-fluid {
+    padding: 0;
+}
+
+p {
+    font-size: 1.2rem;
+
+    @include media-breakpoint-down(xl) {
+        font-size: 1.15rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        font-size: 1.10rem;
+    }
+
+}

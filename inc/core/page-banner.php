@@ -7,16 +7,12 @@ function page_banner($args = NULL)
     }
 
     if (!isset($args['subtitle'])) {
-        $args['subtitle'] = get_field('page_banner_subtitle');
+        $args['subtitle'] = '';
     }
 
     if (!isset($args['photo'])) {
 
-        if (get_field('page_banner_background_image') && !is_archive() && !is_home() && isset($args['photo'])) {
-            $args['photo'] = get_field('page_banner_background_image')['sizes']['page-banner'];
-        } else {
-            $args['photo'] = get_theme_file_uri('/images/hero.jpg');
-        }
+        $args['photo'] = get_theme_file_uri('/assets/css/images/page-banner-background.jpg');
     }
 
 ?>

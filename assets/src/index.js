@@ -5,11 +5,13 @@ import Navbar from "./modules/Navbar";
 import Email from "./modules/Email";
 import Search from "./modules/Search";
 import Login from "./modules/Login";
+import Gallery from "./modules/Gallery";
 
 const terms = new Terms();
 const scroll = new Scroll();
 const navBar = new Navbar();
 const search = new Search();
+const gallery = new Gallery();
 const email = new Email();
 
 if (

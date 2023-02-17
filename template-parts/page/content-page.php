@@ -13,6 +13,10 @@
 
     </header><!-- .entry-header -->
     <div class="entry-content">
+
+        <div class="featured-image">
+            <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title() ?>" />
+        </div>
         <?php
         the_content();
 

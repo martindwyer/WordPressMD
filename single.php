@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div class="page container-fluid">
+<div class="post container-fluid">
     <main id="main" class="site-main">
 
         <?php

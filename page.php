@@ -14,10 +14,10 @@ get_header(); ?>
         while (have_posts()) :
             the_post();
 
-            // page_banner(array(
-            //     'title' => get_the_title(),
-            //     'subtitle' => get_field('page_banner_subtitle')
-            // ));
+            page_banner(array(
+                'title' => get_the_title(),
+                'subtitle' => get_field('subtitle')
+            ));
 
             $slug = get_post_field('post_name', get_post());
             if ($slug == 'contact') {

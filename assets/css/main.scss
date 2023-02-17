@@ -1,5 +1,12 @@
-@import "custom";
-@import "tools";
+@import "base/custom";
+
+@import "base/typography";
+@import "base/mixins";
+@import "base/buttons";
+@import "base/animations";
+@import "base/animate.min";
+@import "base/aos";
+
 @import "components/terms";
 @import "components/navbar";
 @import "components/footer";

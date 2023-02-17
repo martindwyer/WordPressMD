@@ -5,9 +5,21 @@ get_header();
 <div class="page container-fluid">
 
     <div class="content">
+
+        <?php
+        page_banner(array(
+            'title' => "Galleries",
+            'subtitle' => "Collections from personal encounters"
+        ));
+
+        ?>
         <div class="container">
 
+
+
             <?php
+
+            $num_posts = 0;
 
             while (have_posts()) {
                 the_post();
@@ -24,11 +36,12 @@ get_header();
                             <p>Author: <?php the_author_posts_link() ?> on <?php the_time('n.j.y'); ?> in <?php echo get_the_category_list(', '); ?></p>
                         </div>
                         <div class="excerpt">
-                            <?php if (has_excerpt()) {
-                                echo get_the_excerpt();
-                            } else {
-                                echo wp_trim_words(get_the_content(), 100);
-                            } ?> <a href="<?php the_permalink(); ?>" class="nu gray"> read more</a></p>
+                            <p>
+                                <?php if (has_excerpt()) {
+                                    echo get_the_excerpt();
+                                } else {
+                                    echo wp_trim_words(get_the_content(), 100);
+                                } ?> <a href="<?php the_permalink(); ?>" class="nu gray"> read more</a></p>
                         </div>
                     </div>
                 </div>
@@ -36,15 +49,18 @@ get_header();
 
 
             <?php
-
+                $num_posts++;
             }
 
-            echo "<div class='pagination'>";
-            echo "<h4 class='text-center'>Page Links</h4>";
-            echo "<div class='page-links'>";
-            echo paginate_links();
-            echo "</div>";
-            echo "</div>";
+            if ($num_posts >= 10) {
+                echo "<div class='pagination'>";
+                echo "<h4 class='text-center'>Page Links</h4>";
+                echo "<div class='page-links'>";
+                echo paginate_links();
+                echo "</div>";
+                echo "</div>";
+            }
+
             ?>
         </div>
     </div>

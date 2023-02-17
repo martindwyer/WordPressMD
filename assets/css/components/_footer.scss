@@ -25,6 +25,22 @@ footer {
         list-style-type: none;
         margin-left: 0;
         padding-left: 0;
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .categories {
+        display: flex;
+        justify-content: center;
+
+        a {
+            margin-bottom: .5rem;
+        }
     }
 
     .social-media {
@@ -39,4 +55,9 @@ footer {
             }
         }
     }
+}
+
+body>footer>div>div:nth-child(1)>div:nth-child(3)>h5,
+body>footer>div>div:nth-child(1)>div:nth-child(2)>h5 {
+    text-align: center;
 }

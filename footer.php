@@ -24,11 +24,13 @@
             </div>
             <div class="col-sm-6 col-md-3 mb-3">
                 <h5>Articles by Category</h5>
-                <?php wp_list_categories(array(
-                    'exclude' => "1",
-                    'show_count' => 1,
-                    'style' => ""
-                )); ?>
+                <div class="categories">
+                    <?php wp_list_categories(array(
+                        'exclude' => "1",
+                        'show_count' => 1,
+                        'style' => ""
+                    )); ?>
+                </div>
 
             </div>
             <div class="col-6 col-md-3 mb-3 social-media">
