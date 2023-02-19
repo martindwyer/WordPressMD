@@ -2,7 +2,7 @@
     <p>
         We use cookies to ensure you have the best browsing experience on our
         website. By using our site, you acknowledge that you have read and
-        understood our <a href="<?php echo site_url('/legal'); ?>">Terms and Conditions</a>
+        understood our <a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a>
     </p>
     <button id="terms-approval">Proceed to Site</button>
 </div>
