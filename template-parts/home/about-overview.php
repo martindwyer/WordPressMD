@@ -1,4 +1,4 @@
-<div class="row about-martin">
+<div id="approach" class="row about-overview">
     <div class="row">
         <h2>Introducing North Park</h2>
     </div>
@@ -10,7 +10,7 @@
             <h3>Mountain Ranges</h3>
             <p>The basin opens out northward into Wyoming, in the direction of flow of the North Platte. On the east side, it is rimmed by the Medicine Bow Mountains, the Never Summer Mountains and Rabbit Ears Range to the south, and the Park Range to the west. The continental divide rims the Park along the south and west. The valley along the Illinois River is the location of the Arapaho National Wildlife Refuge. The largest community in the valley is Walden, the Jackson County seat, that sits near the middle of the valley near the confluence of the Michigan and Illinois rivers. Smaller communities in the valley include the unincorporated hamlets of Gould and Rand.</p>
 
-            <p><a href="">Read more...</a></p>
+            <p><a href="<?php echo THEME_URI . '/about' ?>">Read more...</a></p>
         </div>
         <div class="col-lg-4 image-card">
             <img src="<?php echo THEME_URI . '/assets/images/Jack20.jpg' ?>" class="img-fluid approach" alt="journey">

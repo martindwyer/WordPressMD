@@ -13,6 +13,7 @@ const navBar = new Navbar();
 const search = new Search();
 const gallery = new Gallery();
 const email = new Email();
+const login = new Login();
 
 if (
   document.querySelector("body.login-action-login") ||

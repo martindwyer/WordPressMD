@@ -11,10 +11,11 @@
             <img src="<?php echo THEME_URI . '/assets/images/favicon_io/android-chrome-512x512.png' ?>" alt="featured-image" class="img-fluid" />
         </div>
         <div class="site-description">
-            <p>A natural treasure on the high plains.</p>
+            <p>Natural treasure in the Colorado Basin</p>
         </div>
-        <div class="btn-learn-more"><a class="btn btn-primary" href="#featured-posts">Read More </a></div>
+        <div class="btn-learn-more"><a class="btn btn-primary" href="#approach">See More </a></div>
 
     </div>
+
 
 </div>

@@ -3,15 +3,12 @@
         <div class="row">
             <div class="col-md-3 mb-3">
                 <h5>
-                    Primal Strength
+                    North Park Colorado
                 </h5>
 
                 <div class="footer-description">
-                    <p class="site-description">A site developed and maintained by certified fitness trainer Martin Dwyer, CFT, SSC, OCC<sup>*</sup>.</p>
+                    <p class="site-description">This website serves as both a personal tribute to North Park as well as a site demo for <span class="bytes-font">md</span>&nbsp; Web Technologies, <span class="bytes-font">md</span>&nbsp; Bytes</a>. </p>
 
-                    <hr>
-
-                    <p class="small"><sup>*</sup>Professional certifications through <a href="https://www.issaonline.com/">International Sports Sciences Association</a></p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3 mb-3">
@@ -28,7 +25,8 @@
                     <?php wp_list_categories(array(
                         'exclude' => "1",
                         'show_count' => 1,
-                        'style' => ""
+                        'style' => "list",
+                        'title_li' => ""
                     )); ?>
                 </div>
 

@@ -11,6 +11,24 @@
                 'menu_class' => 'navbar-nav mb-2 mb-lg-0'
             )) ?>
 
+            <?php if (is_user_logged_in()) {
+            ?>
+                <<?php if (is_admin_user()) {
+                    ?> <a href="<?php echo site_url('/wp-admin'); ?>" class="admin">Admin</a>
+
+                <?php
+                    }
+                ?>
+                <a href="<?php echo wp_logout_url(); ?>" class="logout">Logout</a>
+
+            <?php
+            } else {
+            ?>
+                <!-- <a href="<?php echo wp_login_url(); ?>" class="login">Login</a> -->
+                <a href="<?php echo wp_registration_url(); ?>" class="register">Subscribe</a>
+            <?php } ?>
+
+
             <form class="d-flex navbar-right" role="search" action="<?php echo esc_url(home_url('/')); ?>" method="get">
 
                 <?php if (is_user_logged_in()) {

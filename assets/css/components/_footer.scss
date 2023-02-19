@@ -13,6 +13,10 @@ footer {
 
         .site-description {
             margin-bottom: 2rem;
+
+
+            font-size: 1rem;
+
         }
 
         a {
@@ -37,6 +41,12 @@ footer {
     .categories {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+
+        li {
+            list-style-type: none;
+
+        }
 
         a {
             margin-bottom: .5rem;
@@ -57,7 +67,7 @@ footer {
     }
 }
 
-body>footer>div>div:nth-child(1)>div:nth-child(3)>h5,
+
 body>footer>div>div:nth-child(1)>div:nth-child(2)>h5 {
     text-align: center;
 }

@@ -6,7 +6,7 @@ get_header();
 
     <div class="page-banner row text-center">
         <h1>Category</h1>
-        <h4><?php echo single_term_title(); ?></h4>
+        <h3><?php echo single_term_title(); ?></h3>
     </div>
 
     <div class="content">

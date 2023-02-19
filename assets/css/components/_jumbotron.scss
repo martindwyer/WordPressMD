@@ -1,7 +1,20 @@
 .jumbotron {
+
+    height: 100vh;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 2;
+    }
+
+    background: rgba(black, .4);
     padding-top: 5rem;
-    min-height: 100vh;
-    background-color: rgba(black, .3);
+    overflow: hidden;
+
 
     .right,
     .left {

@@ -1,4 +1,4 @@
-<div class="row about-martin">
+<div class="row about-leaders">
     <div class="row">
         <div class="card col-lg-3 image-card left">
             <img src="<?php echo THEME_URI . '/assets/images/martin.webp' ?>" class="img-fluid left" alt="martin transformation photo">

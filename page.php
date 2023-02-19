@@ -19,13 +19,24 @@ get_header(); ?>
                 'subtitle' => get_field('subtitle')
             ));
 
+
+
             $slug = get_post_field('post_name', get_post());
             if ($slug == 'contact') {
                 get_template_part("template-parts/contact/contact-page-content");
-            } else {
-
+            } else if ($slug == 'about') {
 
         ?>
+                <div class="content">
+                    <div class="container">
+                        <?php get_template_part('template-parts/about/about-page-content'); ?>
+                    </div>
+                </div>
+
+            <?php
+
+            } else {
+            ?>
                 <div class="content">
                     <div class="container">
                         <?php get_template_part('template-parts/page/content', 'page'); ?>

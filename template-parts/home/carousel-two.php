@@ -7,19 +7,19 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo THEME_URI . '/assets/images/PanoramicViews/slider1.webp' ?>" class="d-block w-100" alt="slider 4">
+                <img src="<?php echo THEME_URI . '/assets/images/HomeSlider/003.webp' ?>" class="d-block w-100" alt="slider 4">
                 <div class="carousel-caption">
                     <!-- Placeholder for comment -->
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php echo THEME_URI . '/assets/images/PanoramicViews/slider2.webp' ?>" class="d-block w-100" alt="slider 5">
+                <img src="<?php echo THEME_URI . '/assets/images/HomeSlider/002.webp' ?>" class="d-block w-100" alt="slider 5">
                 <div class="carousel-caption">
                     <!-- Placeholder for comment -->
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php echo THEME_URI . '/assets/images/PanoramicViews/slider3.webp' ?>" class="d-block w-100" alt="slider 6">
+                <img src="<?php echo THEME_URI . '/assets/images/HomeSlider/001.webp' ?>" class="d-block w-100" alt="slider 6">
                 <div class="carousel-caption">
                     <!-- Placeholder for comment -->
                 </div>

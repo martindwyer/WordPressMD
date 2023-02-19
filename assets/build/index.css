@@ -10832,6 +10832,7 @@ textarea.form-control-lg {
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  width: 100vw;
 }
 
 h1, .h1,
@@ -13620,6 +13621,35 @@ p {
   height: 35px;
   width: auto;
 }
+.navbar .admin,
+.navbar .logout,
+.navbar .register,
+.navbar .login {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  background: transparent;
+  border: none;
+  transition: none;
+}
+.navbar .admin:hover,
+.navbar .logout:hover,
+.navbar .register:hover,
+.navbar .login:hover {
+  transform: none;
+  box-shadow: none;
+}
+.navbar .register:hover,
+.navbar .login:hover {
+  color: green;
+}
+.navbar .logout:hover {
+  color: gold;
+}
+.navbar .admin:hover {
+  color: #ab7a26;
+}
 .navbar .navbar-right .btn {
   color: #fff;
   margin-right: 1rem;
@@ -13628,6 +13658,9 @@ p {
 .navbar .navbar-right .logout,
 .navbar .navbar-right .register,
 .navbar .navbar-right .login {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 1rem;
   background: transparent;
   border: none;
   transition: none;
@@ -13663,6 +13696,7 @@ footer .footer-description hr {
 }
 footer .footer-description .site-description {
   margin-bottom: 2rem;
+  font-size: 1rem;
 }
 footer .footer-description a {
   text-decoration: none;
@@ -13682,6 +13716,10 @@ footer .menu .menu-item {
 footer .categories {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+footer .categories li {
+  list-style-type: none;
 }
 footer .categories a {
   margin-bottom: 0.5rem;
@@ -13696,16 +13734,24 @@ footer .social-media li a {
   margin-right: 0.5rem;
 }
 
-body > footer > div > div:nth-child(1) > div:nth-child(3) > h5, body > footer > div > div:nth-child(1) > div:nth-child(3) > .h5,
-body > footer > div > div:nth-child(1) > div:nth-child(2) > h5,
-body > footer > div > div:nth-child(1) > div:nth-child(2) > .h5 {
+body > footer > div > div:nth-child(1) > div:nth-child(2) > h5, body > footer > div > div:nth-child(1) > div:nth-child(2) > .h5 {
   text-align: center;
 }
 
 .jumbotron {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
   padding-top: 5rem;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .jumbotron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
 }
 .jumbotron .right,
 .jumbotron .left {
@@ -13784,18 +13830,24 @@ body > footer > div > div:nth-child(1) > div:nth-child(2) > .h5 {
 }
 
 div.featured-posts {
-  padding: 6rem 3rem 6rem 3rem;
+  padding: 2rem 3rem 2rem 3rem;
   background-color: #fff;
 }
 div.featured-posts h2, div.featured-posts .h2 {
+  margin-top: 2rem;
   margin-bottom: 3rem;
   color: #ab7a26;
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.7);
-  font-size: 4rem;
+  font-size: 3rem;
 }
 div.featured-posts div.card {
   border-color: transparent;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 991.98px) {
+  div.featured-posts div.card {
+    border-right: none;
+  }
 }
 div.featured-posts div.card .card-title {
   margin-bottom: 1.5rem;
@@ -13813,6 +13865,7 @@ div.featured-posts div.card .card-img-holder {
   justify-content: center;
   position: relative;
   margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 div.featured-posts div.card .card-img-holder img {
   height: 35rem;
@@ -13820,16 +13873,17 @@ div.featured-posts div.card .card-img-holder img {
   position: absolute;
   top: 0;
   transition: 1s;
+  transform: translateY(-10%);
 }
 div.featured-posts div.card .card-img-holder img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-10%);
 }
 div.featured-posts div.card .card-body {
   padding-right: 0;
   padding-left: 0;
 }
 
-#featured-posts div:nth-child(3) {
+#featured-posts div:nth-child(4) {
   border-right: none;
 }
 
@@ -13861,10 +13915,10 @@ div.featured-posts div.card .card-body {
 }
 .page-banner h1, .page-banner .h1 {
   font-size: 4rem;
-  text-shadow: 0.2rem 0.2rem 0rem #000;
+  text-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 .page-banner h3, .page-banner .h3 {
-  text-shadow: 0.2rem 0.2rem 0rem #000;
+  text-shadow: 0.1rem 0.1rem 0.2rem #000;
 }
 
 .page.container-fluid, .page.container-sm, .page.container-md, .page.container-lg, .page.container-xl, .page.container-xxl {
@@ -13883,6 +13937,7 @@ div.featured-posts div.card .card-body {
 .page .featured-image img {
   border-radius: 0.5rem;
   width: 70%;
+  max-width: 400px;
   margin-bottom: 2rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
@@ -13914,6 +13969,9 @@ div.featured-posts div.card .card-body {
 .page .post-break {
   width: 50%;
   margin: 3rem auto;
+}
+.page h4, .page .h4 {
+  margin-top: 2rem;
 }
 
 .pagination {
@@ -14104,6 +14162,41 @@ Styling for Contact
   justify-content: center;
 }
 
+.jumbo-carousel {
+  position: relative;
+  overflow: visible;
+  height: 100vh;
+  background: transparent;
+  z-index: 1;
+}
+.jumbo-carousel .carousel {
+  position: absolute;
+  top: 0;
+}
+.jumbo-carousel #carouselOneCaptions,
+.jumbo-carousel .carousel-inner,
+.jumbo-carousel .carousel-item {
+  min-width: 1920px;
+}
+@media (max-width: 991.98px) {
+  .jumbo-carousel #carouselOneCaptions,
+  .jumbo-carousel .carousel-inner,
+  .jumbo-carousel .carousel-item {
+    display: none;
+  }
+}
+.jumbo-carousel .carousel-item {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.jumbo-carousel .carousel-item img {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: auto;
+}
+
 .comments-area {
   margin-top: 3rem;
 }
@@ -14124,74 +14217,178 @@ Styling for Contact
   width: 100%;
 }
 
-.about-martin {
-  padding: 3rem 2rem 6rem 2rem;
+#approach {
+  padding-top: 6rem;
+}
+
+.about-leaders {
+  padding: 3rem 2rem 2rem 2rem;
   background-color: #fff;
 }
-.about-martin .row {
+.about-leaders .row {
   padding: 0;
 }
-.about-martin h2, .about-martin .h2 {
+.about-leaders h2, .about-leaders .h2 {
   text-align: center;
   color: #ab7a26;
   font-size: 3rem;
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);
   margin-bottom: 2rem;
 }
-.about-martin .martin-intro h3, .about-martin .martin-intro .h3 {
+@media (max-width: 767.98px) {
+  .about-leaders h2, .about-leaders .h2 {
+    font-size: 2rem;
+  }
+}
+.about-leaders .martin-intro h3, .about-leaders .martin-intro .h3 {
   color: #ab7a26;
   text-shadow: 0.1rem 0.1rem 0.1rem #000;
+  font-size: 2rem;
 }
-.about-martin .martin-intro ul {
+@media (max-width: 767.98px) {
+  .about-leaders .martin-intro h3, .about-leaders .martin-intro .h3 {
+    font-size: 1.75rem;
+  }
+}
+.about-leaders .martin-intro ul {
   margin-left: 10%;
 }
-.about-martin .martin-intro ul li {
+.about-leaders .martin-intro ul li {
   line-height: 3rem;
   vertical-align: center;
   padding-left: 2rem;
 }
-.about-martin .martin-intro ul li i {
+.about-leaders .martin-intro ul li i {
   color: #ab7a26;
   font-size: 1.5rem;
 }
-.about-martin .card {
+.about-leaders .card {
   border-color: transparent;
 }
-.about-martin .image-card {
+.about-leaders .image-card {
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
 }
-.about-martin .image-card img {
+.about-leaders .image-card img {
   width: 95%;
   border-radius: 0.5rem;
   border-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.7);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
   animation-name: zoomInDown;
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
-.about-martin .image-card img.left {
+.about-leaders .image-card img.left {
   transform: scale(0.95);
   transition: 1s;
 }
-.about-martin .image-card img.left:hover {
+.about-leaders .image-card img.left:hover {
   transform: scale(1.05);
 }
-.about-martin .image-card img.right {
+.about-leaders .image-card img.right {
   transform: scale(0.95);
   transition: 1s;
 }
-.about-martin .image-card img.right:hover {
+.about-leaders .image-card img.right:hover {
   transform: scale(1.05);
 }
-.about-martin .image-card img.approach {
+.about-leaders .image-card img.approach {
   transform: scale(0.9);
   transition: 1s;
 }
-.about-martin .image-card img.approach:hover {
+.about-leaders .image-card img.approach:hover {
+  transform: scale(1);
+}
+
+.about-overview {
+  padding: 3rem 2rem 2rem 2rem;
+  background-color: #fff;
+}
+.about-overview .row {
+  padding: 0;
+}
+.about-overview h2, .about-overview .h2 {
+  text-align: center;
+  color: #ab7a26;
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
+}
+@media (max-width: 767.98px) {
+  .about-overview h2, .about-overview .h2 {
+    font-size: 2rem;
+  }
+}
+.about-overview .martin-intro h3, .about-overview .martin-intro .h3 {
+  color: #ab7a26;
+  text-shadow: 0.1rem 0.1rem 0.1rem #000;
+  font-size: 3rem;
+}
+@media (max-width: 767.98px) {
+  .about-overview .martin-intro h3, .about-overview .martin-intro .h3 {
+    font-size: 1.75rem;
+  }
+}
+.about-overview .martin-intro ul {
+  margin-left: 10%;
+}
+.about-overview .martin-intro ul li {
+  line-height: 3rem;
+  vertical-align: center;
+  padding-left: 2rem;
+}
+.about-overview .martin-intro ul li i {
+  color: #ab7a26;
+  font-size: 1.5rem;
+}
+.about-overview .card {
+  border-color: transparent;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+@media (max-width: 991.98px) {
+  .about-overview .card {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.about-overview .image-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.about-overview .image-card img {
+  width: 95%;
+  border-radius: 0.5rem;
+  border-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+  animation-name: zoomInDown;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.about-overview .image-card img.left {
+  transform: scale(0.95);
+  transition: 1s;
+}
+.about-overview .image-card img.left:hover {
+  transform: scale(1.05);
+}
+.about-overview .image-card img.right {
+  transform: scale(0.95);
+  transition: 1s;
+}
+.about-overview .image-card img.right:hover {
+  transform: scale(1.05);
+}
+.about-overview .image-card img.approach {
+  transform: scale(0.9);
+  transition: 1s;
+}
+.about-overview .image-card img.approach:hover {
   transform: scale(1);
 }
 
@@ -14290,14 +14487,6 @@ Styling for Contact
   display: none;
 }
 
-.login h1 a, .login .h1 a {
-  content: "primal strength";
-}
-
-.login h1, .login .h1 {
-  color: red;
-}
-
 .post {
   animation: fadeIn;
   animation-duration: 3s;
@@ -14314,6 +14503,7 @@ Styling for Contact
 }
 .post .featured-image img {
   width: 70%;
+  max-width: 600px;
   margin-bottom: 3rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
   border-radius: 0.5rem;
@@ -14395,7 +14585,7 @@ Styling for Contact
   overflow: hidden;
   margin: 0rem;
   border-radius: 8px;
-  box-shadow: 0px 0px 3rem #ab7a26;
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.8);
 }
 @media (max-width: 992px) {
   .portfolio-box {
@@ -14417,6 +14607,8 @@ Styling for Contact
   visibility: hidden;
 }
 .portfolio-box .portfolio-info .caption {
+  width: 100%;
+  height: 100%;
   text-align: center;
   color: #ab7a26;
   position: absolute;
@@ -14438,6 +14630,8 @@ Styling for Contact
 }
 .portfolio-box .portfolio-info .caption p {
   font-size: 1rem;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 767.98px) {
   .portfolio-box .portfolio-info .caption p {
@@ -14447,6 +14641,8 @@ Styling for Contact
 }
 .portfolio-box .portfolio-info .caption a {
   display: block;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   color: #ab7a26;
   font-weight: 500;
@@ -14476,10 +14672,22 @@ Styling for Contact
   transition-property: all;
 }
 .portfolio-box:hover .portfolio-info {
-  opacity: 1;
+  opacity: 0.5;
   visibility: visible;
   transition-duration: 1s;
   transition-property: all;
+}
+
+.gslide-inner-content,
+.ginner-container,
+.gslide-media.gslide-image {
+  width: 100vw;
+}
+.gslide-inner-content img,
+.ginner-container img,
+.gslide-media.gslide-image img {
+  width: 80%;
+  height: auto;
 }
 
 /*# sourceMappingURL=index.css.map*/

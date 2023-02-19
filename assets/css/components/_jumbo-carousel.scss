@@ -1,0 +1,39 @@
+.jumbo-carousel {
+    position: relative;
+    overflow: visible;
+    height: 100vh;
+
+    background: transparent;
+    z-index: 1;
+
+    .carousel {
+        position: absolute;
+        top: 0;
+    }
+
+
+    #carouselOneCaptions,
+    .carousel-inner,
+    .carousel-item {
+        min-width: 1920px;
+
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    .carousel-item {
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+
+        img {
+            position: absolute;
+            top: 0;
+            height: 100vh;
+            width: auto;
+        }
+    }
+
+}

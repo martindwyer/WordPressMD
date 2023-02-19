@@ -9,13 +9,11 @@ get_header();
         <?php
         page_banner(array(
             'title' => "Galleries",
-            'subtitle' => "Collections from personal encounters"
+            'subtitle' => "From North Park"
         ));
 
         ?>
-        <div class="container">
-
-
+        <div class="container" style="padding-top:3rem">
 
             <?php
 
@@ -25,22 +23,22 @@ get_header();
                 the_post();
             ?>
                 <div class="post-item row">
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <a href="<?php the_permalink(); ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title() . ' image' ?>" class="feature-image img-fluid" />
                         </a>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-7" style="padding-left:2rem">
                         <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <div class="metabox">
-                            <p>Author: <?php the_author_posts_link() ?> on <?php the_time('n.j.y'); ?> in <?php echo get_the_category_list(', '); ?></p>
+                            <p>Author: <?php the_author_posts_link() ?> on <?php the_time('n.j.y'); ?> in category: <?php echo get_the_category_list(', '); ?>.</p>
                         </div>
                         <div class="excerpt">
                             <p>
                                 <?php if (has_excerpt()) {
                                     echo get_the_excerpt();
                                 } else {
-                                    echo wp_trim_words(get_the_content(), 100);
+                                    echo wp_trim_words(get_the_content(), 40);
                                 } ?> <a href="<?php the_permalink(); ?>" class="nu gray"> read more</a></p>
                         </div>
                     </div>

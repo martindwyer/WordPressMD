@@ -1,0 +1,227 @@
+#approach {
+    padding-top: 6rem;
+}
+
+.about-leaders {
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: $white;
+
+    .row {
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: $primary;
+        font-size: 3rem;
+        text-shadow: .1rem .1rem .1rem rgba($black, .8);
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-down(md) {
+            font-size: 2rem;
+        }
+    }
+
+    .martin-intro {
+
+        h3 {
+            color: $primary;
+            text-shadow: .1rem .1rem .1rem $black;
+            font-size: 2rem;
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.75rem;
+            }
+        }
+
+        ul {
+            margin-left: 10%;
+
+            li {
+                line-height: 3rem;
+                vertical-align: center;
+                padding-left: 2rem;
+
+                i {
+                    color: $primary;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .card {
+        border-color: transparent;
+
+
+    }
+
+    .image-card {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+
+        img {
+            width: 95%;
+            border-radius: $border-radius;
+            border-color: rgba($black, .7);
+
+            box-shadow: 1rem 1rem 1rem rgba($black, .5);
+            animation-name: zoomInDown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+            &.left {
+                transform: scale(.95);
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.05);
+
+                }
+            }
+
+            &.right {
+                transform: scale(.95);
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.05);
+
+                }
+            }
+
+            &.approach {
+
+                transform: scale(.9);
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1);
+
+                }
+            }
+        }
+
+
+
+
+    }
+}
+
+.about-overview {
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: $white;
+
+    .row {
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: $primary;
+        font-size: 3rem;
+        text-shadow: .1rem .1rem .1rem rgba($black, .8);
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-down(md) {
+            font-size: 2rem;
+        }
+    }
+
+    .martin-intro {
+
+        h3 {
+            color: $primary;
+            text-shadow: .1rem .1rem .1rem $black;
+            font-size: 3rem;
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.75rem;
+            }
+        }
+
+        ul {
+            margin-left: 10%;
+
+            li {
+                line-height: 3rem;
+                vertical-align: center;
+                padding-left: 2rem;
+
+                i {
+                    color: $primary;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .card {
+        border-color: transparent;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        @include media-breakpoint-down(lg) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+    }
+
+    .image-card {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+
+        img {
+            width: 95%;
+            border-radius: $border-radius;
+            border-color: rgba($black, .7);
+
+            box-shadow: 1rem 1rem 1rem rgba($black, .5);
+            animation-name: zoomInDown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+            &.left {
+                transform: scale(.95);
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.05);
+
+                }
+            }
+
+            &.right {
+                transform: scale(.95);
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.05);
+
+                }
+            }
+
+            &.approach {
+
+                transform: scale(.9);
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1);
+
+                }
+            }
+        }
+
+
+
+
+    }
+}

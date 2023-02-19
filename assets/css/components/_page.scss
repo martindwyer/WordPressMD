@@ -18,6 +18,7 @@
         img {
             border-radius: $border-radius;
             width: 70%;
+            max-width: 400px;
             margin-bottom: 2rem;
             box-shadow: 0 0 1rem rgba(black, .8);
         }
@@ -65,6 +66,10 @@
     .post-break {
         width: 50%;
         margin: 3rem auto;
+    }
+
+    h4 {
+        margin-top: 2rem;
     }
 }
 

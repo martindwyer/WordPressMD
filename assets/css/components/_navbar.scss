@@ -11,6 +11,40 @@
         }
     }
 
+    .admin,
+    .logout,
+    .register,
+    .login {
+        text-decoration: none;
+        color: rgba($white, .55);
+        margin-right: .5rem;
+        margin-left: .5rem;
+        background: transparent;
+        border: none;
+        transition: none;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    .register:hover,
+    .login:hover {
+        color: green;
+    }
+
+    .logout:hover {
+        color: gold;
+    }
+
+    .admin:hover {
+        color: #ab7a26
+    }
+
+
+
+
     .navbar-right {
 
         .btn {
@@ -22,6 +56,9 @@
         .logout,
         .register,
         .login {
+            text-decoration: none;
+            color: $white;
+            margin-right: 1rem;
             background: transparent;
             border: none;
             transition: none;
