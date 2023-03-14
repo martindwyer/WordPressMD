@@ -3,16 +3,16 @@
 function setup_head_section()
 {
 ?>
-  <meta property="og:title" content=<?php echo get_the_title(); ?> | Primal Strength and Conditioning - Living Strong and Staying Positive key="title" />
-  <meta name="description" content="Primal Strength Training and Conditioning, a website dedicated to strength, conditioning and longevity." />
-  <meta name="keywords" content="power lifting conditioning weight lifting fitness longevity" />
-  <meta property="og:title" content="<?php echo get_the_title(); ?> | Primal Strength and Conditioning - Living Strong and Staying Positive" />
+  <meta property="og:title" content="<?php echo get_the_title(); ?> | North Park Colorado - Natural treasure in the Colorado Basin" key="title" />
+  <meta name="description" content="North Park Colorado - Natural treasure in the Colorado Basin. Galleries of wildlife in its native habitat." />
+  <meta name="keywords" content="mountains high plains peaks trails mountain lakes trails parks moose mountain lion bobcat coyotes wolves birds deer" />
+  <meta property="og:title" content="<?php echo get_the_title(); ?> | North Park Colorado - Natural treasure in the Colorado Basin" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://goprimalstrength.com/" />
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
 
-  <meta name="twitter:title" content="<?php echo get_the_title(); ?> | Primal Strength and Conditioning - Living Strong and Staying Positive" />
-  <meta name="twitter:description" content="Primal Strength Training and Conditioning, a website dedicated to strength, conditioning and longevity." />
+  <meta name="twitter:title" content="<?php echo get_the_title(); ?> | North Park Colorado - Natural treasure in the Colorado Basin" />
+  <meta name="twitter:description" content="North Park Colorado - Natural treasure in the Colorado Basin. Galleries of wildlife in its native habitat." />
   <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
   <meta name="twitter:card" content="summary_large_image" />
 <?php
