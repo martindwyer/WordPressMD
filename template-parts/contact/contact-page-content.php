@@ -40,8 +40,9 @@
                         <div class="mb-3">
                             <label for="comments">Message</label><textarea name="message" class="form-control" id="comments" placeholder="Your message here" required=""></textarea>
                         </div>
-                        <button id="submit-button" type="button" class="btn rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Submit</button><input id="submit" type="submit" class="btn btn-primary" disabled="" />
+                        <button id="submit-button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Submit</button>
+                        <input id="submit" type="submit" class="btn btn-primary" disabled="" hidden />
                     </form>
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -53,12 +54,12 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Click <i>Send</i> to finalize your message.
+                                    Click <i>'Send'</i> to finalize your message. Click <i>'Cancel'</i> to cancel sending this message.
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                        Close</button>
-                                    <button id="sendButton" type="button" class="btn btn-primary">Send</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                                        Cancel</button>
+                                    <button id="sendButton" type="button" class="btn btn-warning">Send</button>
                                 </div>
                             </div>
                         </div>

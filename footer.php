@@ -1,3 +1,16 @@
+<?php
+
+/**
+ * The template for the site footer containing each of the following:
+ *
+ * 1.  An overview of the site.
+ * 2.  Site navigation menu.
+ * 3.  An interactive list of posts by category
+ * 4.  Social media links.
+ *
+ * @package NorthParkMD
+ */
+?>
 <footer class="">
     <div class="container-fluid pt-4 pt-md-4 px-4 px-md-3 bg-dark text-light">
         <div class="row">

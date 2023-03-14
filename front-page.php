@@ -1,5 +1,16 @@
 <!-- Get site header -->
-<?php get_header() ?>
+<?php get_header();
+/**
+ * The template for the site landing page containing each of the following:
+ *
+ * 1.  A carousel landing page with site title and tagline.
+ * 2.  An overview of the site.
+ * 3.  Three featured posts with the thumbnails of each.
+ * 4.  An overview of the site creators.
+ *
+ * @package NorthParkMD
+ */
+?>
 
 <div class="container-fluid px-0 py-6">
 

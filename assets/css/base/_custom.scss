@@ -8,9 +8,11 @@ $danger: red;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-$logo-font: "Cinzel Decorative", cursive;
+$logo-font: "Cinzel Decorative",
+cursive;
 
-$bytes-font: "MuseoModerno", cursive;
+$bytes-font: "MuseoModerno",
+cursive;
 
 .bytes-font {
   font-family: $bytes-font;
@@ -40,17 +42,20 @@ a {
   color: blue;
 }
 
-.btn {
-  background-color: $warning;
-  border-color: $warning;
+.btn-primary {}
+
+.btn,
+.btn-primary {
   color: $white;
   transition: 1s;
-}
 
-.btn:hover {
-  color: $white;
-  box-shadow: 0 0 2rem $white;
-  transform: scale(1.1);
+  &:hover {
+    color: $white;
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba($secondary, .8);
+
+  }
+
 }
 
 $border-radius: 0.5rem;
@@ -75,4 +80,9 @@ body::after {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#close-modal,
+#close-modal>span {
+  display: none;
 }

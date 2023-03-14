@@ -295,43 +295,40 @@ __webpack_require__.r(__webpack_exports__);
 
 class Email {
   constructor() {
-    if (document.querySelector("#sendButton")) {
-      this.sendButton = document.querySelector("#sendButton");
-      this.submitEmail = document.querySelector("#submit");
+    if (document.querySelector('#sendButton')) {
+      this.sendButton = document.querySelector('#sendButton');
+      this.submitEmail = document.querySelector('#submit');
       this.events();
       _emailjs_browser__WEBPACK_IMPORTED_MODULE_0__["default"].init(_config_keys__WEBPACK_IMPORTED_MODULE_1__["default"].emailJS);
     }
   }
   events = () => {
-    this.sendButton.addEventListener("click", e => this.confirmSend(e));
-    this.submitEmail.addEventListener("click", e => this.sendEmail(e));
+    this.sendButton.addEventListener('click', e => this.confirmSend(e));
+    this.submitEmail.addEventListener('click', e => this.sendEmail(e));
   };
   confirmSend = e => {
-    console.log("starting confirm");
-    document.querySelector("#close-modal").click();
-    document.querySelector("#submit-button").style.backgroundColor = "#009900";
-    document.querySelector("#submit-button").style.border = "1px solid #009900";
-    document.querySelector("#submit-button").classList.add("shadow-none");
-    document.querySelector("#submit").disabled = false;
-    document.querySelector("#submit").click();
-    console.log("just submitted");
-    document.querySelector("#submit").disabled = true;
+    console.log('starting confirm');
+    document.querySelector('#close-modal').click();
+    document.querySelector('#submit').disabled = false;
+    document.querySelector('#submit').click();
+    console.log('just submitted');
+    document.querySelector('#submit').disabled = true;
   };
   sendEmail = e => {
     e.preventDefault();
     let templateParams = {
-      to_name: "Martin Dwyer",
-      from_name: document.querySelector("#name").value,
-      reply_to: document.querySelector("#email").value,
-      message: document.querySelector("#comments").value
+      to_name: 'Martin Dwyer',
+      from_name: document.querySelector('#name').value + ' at North Park website contact form',
+      reply_to: document.querySelector('#email').value,
+      message: document.querySelector('#comments').value
     };
-    _emailjs_browser__WEBPACK_IMPORTED_MODULE_0__["default"].send("service_998jv3x", "template_gkvwqkc", templateParams).then(result => {
-      document.querySelector("#success-message").innerHTML = "Thanks!  We will reply to your message within 24 hours.";
-      document.getElementById("form").reset();
+    _emailjs_browser__WEBPACK_IMPORTED_MODULE_0__["default"].send('service_998jv3x', 'template_gkvwqkc', templateParams).then(result => {
+      document.querySelector('#success-message').innerHTML = 'Thanks!  We will reply to your message within 24 hours.';
+      document.getElementById('form').reset();
       console.log(result);
     }, error => {
-      document.querySelector("#error-message").innerHTML = "A problem was incurred sending your message.  Please try again later.";
-      document.getElementById("form").reset();
+      document.querySelector('#error-message').innerHTML = 'A problem was incurred sending your message.  Please try again later.';
+      document.getElementById('form').reset();
       console.log(error);
     });
   };
@@ -458,19 +455,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class Login {
   constructor() {
-    this.siteTitle();
-    this.loginForm();
+    if (document.querySelector('.login')) {
+      this.siteTitle();
+      this.loginForm();
+    }
   }
   loginForm = () => {
-    let login = document.querySelector("#loginform");
-    login.style = "border-radius: 8px";
-    login.style = "margin-top: 0";
+    let login = document.querySelector('#loginform');
+    login.style = 'border-radius: 8px';
+    login.style = 'margin-top: 0';
   };
   siteTitle = () => {
-    let banner = document.querySelector("#login h1");
-    let newNode = document.createElement("h2");
-    let titleText = document.createTextNode("Primal Strength");
-    banner.insertAdjacentHTML("beforebegin", ` <h2 style='text-align:center;color: white;font-size:2.5rem;margin-bottom:0rem;'>Primal Strength</h2>
+    let banner = document.querySelector('#login h1');
+    let newNode = document.createElement('h2');
+    let titleText = document.createTextNode('Primal Strength');
+    banner.insertAdjacentHTML('beforebegin', ` <h2 style='text-align:center;color: white;font-size:2.5rem;margin-bottom:0rem;'>Primal Strength</h2>
         <h3 style="font-size: 1.75rem; text-align:center; color: white; margin-top:0; margin-bottom: 40px;line-height: .5;"><br>Member Portal</h3>
           `);
   };

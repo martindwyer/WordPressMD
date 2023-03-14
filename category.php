@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * The template for displaying posts by category
+ *
+ * The page will contain a thumbnail of a featured image and short excerpt
+ * for each post in the category.
+ *
+ * @package NorthParkMD
+ */
 get_header();
 ?>
 

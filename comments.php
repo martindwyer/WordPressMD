@@ -5,9 +5,7 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package NorthParkMD
  */
 
 /*
@@ -55,14 +53,14 @@ if (post_password_required()) {
                 <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'twentythirteen')); ?></div>
                 <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'twentythirteen')); ?></div>
             </nav><!-- .comment-navigation -->
-        <?php endif; // Check for comment navigation 
+        <?php endif; // Check for comment navigation
         ?>
 
         <?php if (!comments_open() && get_comments_number()) : ?>
             <p class="no-comments"><?php _e('Comments are closed.', 'twentythirteen'); ?></p>
         <?php endif; ?>
 
-    <?php endif; // have_comments() 
+    <?php endif; // have_comments()
     ?>
 
     <?php comment_form(); ?>

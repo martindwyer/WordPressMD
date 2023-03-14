@@ -10859,17 +10859,16 @@ a {
   color: blue;
 }
 
-.btn {
-  background-color: #009900;
-  border-color: #009900;
+.btn,
+.btn-primary {
   color: #fff;
   transition: 1s;
 }
-
-.btn:hover {
+.btn:hover,
+.btn-primary:hover {
   color: #fff;
-  box-shadow: 0 0 2rem #fff;
   transform: scale(1.1);
+  box-shadow: 0 0 2rem rgba(128, 128, 128, 0.8);
 }
 
 .no-decoration {
@@ -10889,6 +10888,11 @@ body::after {
   /* needed to keep in the background */
   background: url(images/site-background-1.feabc9e8.webp) top center;
   background-size: cover;
+}
+
+#close-modal,
+#close-modal > span {
+  display: none;
 }
 
 .site-main {
@@ -13687,9 +13691,6 @@ p {
 .navbar .navbar-right .btn-search i {
   color: #fff;
 }
-.navbar form {
-  display: none !important;
-}
 
 footer a {
   text-decoration: none;
@@ -13946,7 +13947,8 @@ div.featured-posts div.card .card-body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
 .page .content {
-  padding: 3rem 0;
+  padding: 0;
+  padding-bottom: 4rem;
   background-color: #fff;
 }
 .page .post-item .feature-image {
@@ -14145,6 +14147,12 @@ Styling for Contact
   margin-top: 1em;
   margin-bottom: 1.5em;
   visibility: hidden;
+}
+.get-started #success-message,
+.get-started #error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel.slide {
@@ -14489,6 +14497,20 @@ Styling for Contact
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
   display: none;
+}
+
+.search div.page.container-fluid > div.content, .search div.page.container-sm > div.content, .search div.page.container-md > div.content, .search div.page.container-lg > div.content, .search div.page.container-xl > div.content, .search div.page.container-xxl > div.content {
+  padding-top: 0;
+}
+
+.search-summary {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+.search-summary p {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 90%;
 }
 
 .post {

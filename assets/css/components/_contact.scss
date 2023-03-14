@@ -200,4 +200,11 @@ Styling for Contact
 
     }
 
+    #success-message,
+    #error-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }

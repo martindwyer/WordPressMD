@@ -10,14 +10,36 @@ get_header();
 
     <div class="content">
         <div class="container" style="min-height:30vh;">
+            <div class="row">
+                <?php get_search_form(); ?>
+            </div>
 
             <?php
 
             if (have_posts()) {
+                global $wp_query;
+                $count = $wp_query->found_posts;
+                if ($count > 1) {
+            ?>
+                    <div class="row search-summary">
+                        <p class="text-center"><?php echo $count ?> results for '<?php the_search_query() ?>'</p>
+                    </div>
+                <?php
+                } else if ($count == 1) {
+                ?>
+                    <div class="row search-summary">
+                        <p class="text-center"><?php echo $count ?> result for '<?php the_search_query() ?>'</p>
+                    </div>
+                <?php
+                }
+
+
+
                 while (have_posts()) {
                     the_post();
-                    $count++;
-            ?>
+
+                ?>
+
                     <div class="post-item row">
                         <div class="col-md-3">
                             <a href="<?php the_permalink(); ?>">
@@ -40,10 +62,15 @@ get_header();
                     </div>
                     <hr class="post-break">
 
-            <?php
+                <?php
                 }
             } else {
-                echo '<h2 class="headline headline--small-plus">No results match that search</h2>';
+                ?>
+                <div class="row search-summary">
+                    <p class="text-center">No results for '<?php the_search_query() ?>'</p>
+                </div>
+
+            <?php
             }
             wp_reset_postdata();
             ?>

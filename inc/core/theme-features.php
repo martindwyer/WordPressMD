@@ -2,6 +2,8 @@
 
 function theme_features()
 {
+    add_post_type_support('page', 'excerpt');
+    add_post_type_support('post', 'excerpt');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     register_nav_menu('header-menu-location', 'Header Menu Location');

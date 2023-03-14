@@ -1,6 +1,4 @@
 .navbar {
-
-
     padding-left: 5%;
     padding-right: 5%;
 
@@ -16,9 +14,9 @@
     .register,
     .login {
         text-decoration: none;
-        color: rgba($white, .55);
-        margin-right: .5rem;
-        margin-left: .5rem;
+        color: rgba($white, 0.55);
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
         background: transparent;
         border: none;
         transition: none;
@@ -39,14 +37,10 @@
     }
 
     .admin:hover {
-        color: #ab7a26
+        color: #ab7a26;
     }
 
-
-
-
     .navbar-right {
-
         .btn {
             color: $white;
             margin-right: 1rem;
@@ -81,10 +75,7 @@
                 color: $white;
             }
         }
-
     }
 
-    form {
-        display: none !important;
-    }
+
 }
