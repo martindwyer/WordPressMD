@@ -11,7 +11,7 @@ function home_posts()
             <h5 class="card-title text-center"><a href="<?php the_permalink(); ?>" class="no-decoration"><?php the_title(); ?></a></h5>
             <div class="card-img-holder">
 
-                <img src="<?php the_post_thumbnail_url() ?>" class="" alt="<?php the_title() . ' image' ?> " height="300">
+                <img src="<?php the_post_thumbnail_url('large') ?>" class="" alt="<?php the_title() . ' image' ?> " height="300">
             </div>
             <div class="card-body">
 
