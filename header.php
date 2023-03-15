@@ -17,7 +17,7 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="<?php echo THEME_URI . "/assets/images/favicon_io/favicon.ico" ?>">
     <?php wp_head() ?>
 </head>

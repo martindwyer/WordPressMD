@@ -18,6 +18,10 @@
 
     border-radius: 8px;
 
+    @include media-breakpoint-down(lg) {
+        top: 50%;
+    }
+
     .cookie-link {
         border: none;
         color: $link-color !important;
